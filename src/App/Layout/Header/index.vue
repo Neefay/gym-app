@@ -18,7 +18,7 @@
             <router-link to="/">
                 <v-toolbar-title class="text-uppercase mr-2">
                     <v-icon class="mr-2">mdi-karate</v-icon>
-                    <span class="white--text">Aitakigu</span>
+                    <span class="white--text">Aitakigu </span>
                 </v-toolbar-title>
             </router-link>
             <ButtonsList :list=navigationBarButtons.left></ButtonsList>
