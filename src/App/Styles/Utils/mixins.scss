@@ -1,0 +1,7 @@
+@function f($factor) {
+	@return ($factor * $global_factor);
+}
+
+@mixin fp($property, $factor) {
+	#{$property}: #{f($factor)}px;
+}

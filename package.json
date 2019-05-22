@@ -1,0 +1,49 @@
+{
+  "name": "aitakigu",
+  "version": "0.2.0",
+  "scripts": {
+    "dev": "npm run serve | npm run server:dev",
+    "server": "node ./src/Server",
+    "server:dev": "nodemon ./src/Server",
+    "serve": "vue-cli-service serve",
+    "lint": "vue-cli-service lint",
+    "start": "node ./src/Server",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.6",
+    "core-js": "^2.6.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.5.6",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-facebook": "^3.0.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vue2-filters": "^0.6.0",
+    "vuelidate": "^0.7.4",
+    "vuetify": "^1.5.5",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@mdi/font": "^3.6.95",
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "vue-cli-plugin-vuetify": "^0.5.0",
+    "vue-template-compiler": "^2.5.21",
+    "vuetify-loader": "^1.0.5"
+  },
+  "license": "MIT"
+}
