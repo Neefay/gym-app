@@ -21,7 +21,7 @@
                     <span class="white--text">Aitakigu </span>
                 </v-toolbar-title>
             </router-link>
-            <ButtonsList :list=navigationBarButtons.left></ButtonsList>
+            <ButtonsList :list=navigationBarButtons.right></ButtonsList>
             <v-spacer></v-spacer>
             <ButtonsList :list=navigationBarButtons.right class="hidden-xs-only"></ButtonsList>
         </v-toolbar>
