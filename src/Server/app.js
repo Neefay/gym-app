@@ -4,6 +4,7 @@ const   bodyParser = require('body-parser'),
         cors = require('cors'),
         serveStatic = require('serve-static'),
         { resolve } = require('path'),
+        history = require('connect-history-api-fallback'),
 
         routes = require('./Config/routes'),
         db = require('./Config/db'),
@@ -18,6 +19,7 @@ module.exports = (app, e) => {
     app.set('port', process.env.PORT);
     app.use(cors())
     app.use(morgan('dev'))
+    app.use(history())
 
     app.use(serveStatic(publicPath, staticConf))
 
