@@ -51,21 +51,6 @@
                 <v-icon class="ml-1">{{ `mdi-checkbox-${( canSubmit ? 'blank' : 'marked' )}-outline` }}</v-icon>
             </v-btn>
         </section>
-        <v-snackbar
-            v-model="snackbarDisplay"
-            :color="snackbarColor"
-            :timeout="12000"
-
-            bottom
-            right
-            multi-line
-        >
-            {{ snackbarText }}
-            <v-btn dark flat @click="snackbarDisplay = false">
-                Close
-                <v-icon class="ml-1">mdi-close</v-icon>
-            </v-btn>
-        </v-snackbar>
     </v-form>
 </template>
 

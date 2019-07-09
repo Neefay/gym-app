@@ -18,6 +18,14 @@
                 <v-flex xs12 sm8 md6>
                     <SignupForm></SignupForm>
                 </v-flex>
+                <v-flex xs12>
+                    <v-btn href="http://localhost:8080/auth/google" color="orange" dark>
+                        Google
+                    </v-btn>
+                    <v-btn @click="getSession()" color="white">
+                        Current Session
+                    </v-btn>
+                </v-flex>
             </v-layout>
         </v-container>
     </div>

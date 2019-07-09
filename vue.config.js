@@ -10,7 +10,6 @@ module.exports = {
 		}
 	},
 	devServer: {
-		// before: require('./src/Server/app'),
 		historyApiFallback: true,
 		hot: true,
 		hotOnly: true,

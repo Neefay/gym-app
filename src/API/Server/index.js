@@ -2,7 +2,8 @@
 const   path = require('path'),
         fs = require('fs'),
         modules_path = path.join(__dirname, "../../Server/Modules"),
-        folders = fs.readdirSync(modules_path).filter(file => ((file.indexOf(".") < 0) && (file !== "index.js")));
+        folders = fs.readdirSync(modules_path).filter(file => ((file.indexOf(".") < 0) && (file !== "index.js"))),
+        DEFAULT_OPTIONS = require("../../Server/Config/server").DEFAULT_OPTIONS
 
 const getFile = filename => {
     let files = {};
@@ -33,8 +34,23 @@ const mountAllRoutes = (app, express) => {
     }
 }
 
+const getString = (str, req) => {
+
+    // TODO: Include language on the header requests
+
+    const   { STRING_LIST } = require("../../Server/Locale"),
+            splitString = str.split(".")
+    let retString = STRING_LIST
+
+    for (let i = 0; i < splitString.length; i++) {
+        retString = retString[splitString[i]];
+    }
+    return retString[(DEFAULT_OPTIONS.LANGUAGE)]
+}
+
 module.exports = {
     getMethods,
+    getString,
 
     mountAllRoutes
 }

@@ -60,4 +60,17 @@ const generateFormErrors = (v, form_object) => {
     return formErrorsObj
 }
 
-export { setFormData, generateFormErrors, getTypeMsg }
+const isValid = (v) => {
+    const   _isNil = require("lodash/isNil"),
+            _isNull = require("lodash/isNull"),
+            _isUndefined = require("lodash/isUndefined")
+    return !(_isNil(v) || _isNull(v) || _isUndefined(v))
+}
+
+export {
+    setFormData,
+    generateFormErrors,
+    getTypeMsg,
+
+    isValid
+}

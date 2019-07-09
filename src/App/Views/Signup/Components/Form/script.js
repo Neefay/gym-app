@@ -1,10 +1,10 @@
 
-import axios from 'axios'
-
 import { validationMixin } from 'vuelidate'
 import { BasicFormMixin } from '@/API/Client/Mixins'
 
 import { setFormData } from "@/API/Lib/validation"
+import { requestPOST, requestGET } from "@/API/Client/Methods/requests"
+
 import { UserForm } from '@/Server/Modules/User/model'
 
 const formData = setFormData(UserForm);
@@ -19,10 +19,6 @@ export default {
         name: "",
         email: "",
 
-        snackbarDisplay: false,
-        snackbarText: "",
-        snackbarColor: "primary",
-
         formData
     }),
 
@@ -33,13 +29,9 @@ export default {
             const   { username, password, name, email } = this,
                     data = { username, password, name, email }
 
-            axios.post('api/user/post', data).then(r => {
-                if (r.status === 200) {
-                    this.snackbarText = r.data
-                    this.snackbarColor = "success"
-                    this.snackbarDisplay = true
-                }
-                return cb();
+            requestPOST("api/user/post", data, { cb })
+            .then(res => {
+                console.log(res);
             })
         }
     },

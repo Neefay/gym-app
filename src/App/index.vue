@@ -13,6 +13,7 @@
 </template>
 
 <script>
+
 import HeaderLayout from "./Layout/Header"
 import FooterLayout from "./Layout/Footer"
 
